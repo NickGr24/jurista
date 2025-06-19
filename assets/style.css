@@ -1,308 +1,695 @@
 /* Основные стили для JURISTA */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', Arial, sans-serif;
-  background: #fff;
-  color: #222;
+
+:root {
+    --primary: #1a1a1a;
+    --accent: #e6b800;
+    --bg: #fff;
+    --text: #222;
+    --gray: #f5f5f5;
+    --transition: 0.3s cubic-bezier(.4,0,.2,1);
 }
 
-/* Стили будут дополняться */
-.header {
-  width: 100%;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: linear-gradient(120deg, #4ade80 0%, #f87171 100%);
+    min-height: 100vh;
 }
+
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
-.logo-title {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+
+.header {
+    background: var(--bg);
+    border-bottom: 1px solid #eee;
+    padding: 24px 0 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: box-shadow var(--transition);
 }
 .logo {
-  height: 48px;
-  width: auto;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 2px;
+    display: inline-block;
 }
-.brand {
-  font-family: 'Inter', Arial, sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
-  color: #222;
-  letter-spacing: 0.02em;
+.nav {
+    float: right;
+}
+.nav a {
+    color: var(--primary);
+    text-decoration: none;
+    margin-left: 32px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color var(--transition);
+}
+.nav a:hover {
+    color: var(--accent);
 }
 .hero {
-  background: linear-gradient(120deg, #f5f7fa 0%, #c3cfe2 100%);
-  padding: 80px 0 60px 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 100px 0 60px 0;
+    text-align: center;
+    margin-bottom: 40px;
 }
-.hero-title {
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 3rem;
-  font-weight: 800;
-  color: #222;
-  margin-bottom: 16px;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
-  animation: fadeInUp 1s cubic-bezier(.77,0,.18,1) 0.2s both;
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 16px;
 }
-.hero-subtitle {
-  font-size: 1.5rem;
-  color: #555;
-  margin-bottom: 32px;
-  animation: fadeInUp 1s cubic-bezier(.77,0,.18,1) 0.5s both;
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 32px;
 }
-.hero-next {
-  display: inline-block;
-  background: #fff;
-  color: #1a73e8;
-  font-weight: 600;
-  padding: 12px 32px;
-  border-radius: 32px;
-  box-shadow: 0 4px 24px rgba(26,115,232,0.08);
-  font-size: 1.1rem;
-  letter-spacing: 0.01em;
-  transition: box-shadow 0.3s, transform 0.3s;
-  cursor: pointer;
-  animation: fadeInUp 1s cubic-bezier(.77,0,.18,1) 0.8s both;
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background var(--transition), color var(--transition), box-shadow 0.2s;
+    cursor: pointer;
 }
-.hero-next:hover {
-  box-shadow: 0 8px 32px rgba(26,115,232,0.16);
-  transform: translateY(-2px) scale(1.03);
+.btn-primary {
+    background: var(--accent);
+    color: #fff;
+    border: none;
 }
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.btn-primary:hover {
+    background: #cfa000;
 }
-.services {
-  background: #f7f8fa;
-  padding: 60px 0 40px 0;
+.btn-primary:active, .btn-secondary:active {
+    box-shadow: 0 2px 8px 0 #0002;
 }
-.section-title {
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: #1a73e8;
-  margin-bottom: 32px;
-  text-align: center;
-  letter-spacing: -0.01em;
+.btn-secondary {
+    background: #fff;
+    color: var(--accent);
+    border: 2px solid var(--accent);
 }
-.services-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  justify-content: center;
+.btn-secondary:hover {
+    background: var(--accent);
+    color: #fff;
 }
-.service-item {
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(26,115,232,0.07);
-  padding: 18px 32px;
-  font-size: 1.1rem;
-  color: #222;
-  font-weight: 600;
-  transition: box-shadow 0.3s, transform 0.3s;
-  margin-bottom: 12px;
-  cursor: pointer;
-  min-width: 220px;
-  text-align: center;
+.services, .about, .blog, .e-jurista {
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    margin-bottom: 40px;
 }
-.service-item:hover {
-  box-shadow: 0 8px 32px rgba(26,115,232,0.13);
-  transform: translateY(-2px) scale(1.04);
-}
-.about {
-  background: #fff;
-  padding: 60px 0 40px 0;
-}
-.about-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 24px 0;
-  text-align: center;
-}
-.about-list li {
-  font-size: 1.1rem;
-  color: #1a73e8;
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-.about-text {
-  max-width: 700px;
-  margin: 0 auto;
-  color: #444;
-  font-size: 1.08rem;
-  text-align: center;
-  line-height: 1.6;
-}
-.blog {
-  background: #f7f8fa;
-  padding: 60px 0 40px 0;
-}
-.blog-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 18px 0;
-  text-align: center;
-}
-.blog-list li {
-  margin-bottom: 10px;
-}
-.blog-list a {
-  color: #1a73e8;
-  font-size: 1.08rem;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s;
-}
-.blog-list a:hover {
-  color: #0d47a1;
-  text-decoration: underline;
-}
-.blog-more {
-  display: inline-block;
-  background: #1a73e8;
-  color: #fff;
-  padding: 10px 28px;
-  border-radius: 24px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-.blog-more:hover {
-  background: #0d47a1;
-}
-.e-jurista {
-  background: #fff;
-  padding: 60px 0 40px 0;
-}
-.e-jurista-desc {
-  text-align: center;
-  color: #444;
-  max-width: 700px;
-  margin: 0 auto 32px auto;
-  font-size: 1.08rem;
-}
-.e-jurista-products {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  justify-content: center;
-  margin-bottom: 24px;
-}
-.product-item {
-  background: #f7f8fa;
-  border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(26,115,232,0.07);
-  padding: 18px 18px 12px 18px;
-  text-align: center;
-  width: 220px;
-  transition: box-shadow 0.3s, transform 0.3s;
-}
-.product-item img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 10px;
-}
-.product-title {
-  font-size: 1rem;
-  color: #222;
-  font-weight: 600;
-}
-.product-item:hover {
-  box-shadow: 0 8px 32px rgba(26,115,232,0.13);
-  transform: translateY(-2px) scale(1.04);
-}
-.e-jurista-more {
-  display: inline-block;
-  background: #1a73e8;
-  color: #fff;
-  padding: 10px 28px;
-  border-radius: 24px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-.e-jurista-more:hover {
-  background: #0d47a1;
-}
-.contacts {
-  background: #f7f8fa;
-  padding: 60px 0 40px 0;
-}
-.contacts-desc {
-  text-align: center;
-  color: #444;
-  font-size: 1.08rem;
-  margin-bottom: 18px;
-}
-.contacts-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  font-size: 1.1rem;
-  color: #1a73e8;
-  font-weight: 600;
+.services h2, .about h2, .blog h2, .e-jurista h2 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+    font-weight: 700;
 }
 .footer {
-  background: #222;
-  color: #fff;
-  padding: 32px 0 16px 0;
+    background: rgba(30,30,30,0.95);
+    color: #fff;
+    padding: 40px 0 20px 0;
+    text-align: center;
+    margin-top: 40px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s var(--transition), transform 0.8s var(--transition);
+}
+.footer.visible {
+    opacity: 1;
+    transform: none;
+}
+.footer .contact-form {
+    margin: 20px auto 0 auto;
+    max-width: 400px;
+    display: flex;
+    gap: 10px;
+}
+.footer input[type="email"] {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+}
+.footer button {
+    padding: 10px 24px;
+    border-radius: 20px;
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background var(--transition);
+}
+.footer button:hover {
+    background: #cfa000;
 }
 .footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  justify-content: center;
-  margin-bottom: 18px;
+    margin: 24px 0 8px 0;
+    font-size: 0.95rem;
+    color: #bbb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
 }
 .footer-links a {
-  color: #fff;
-  font-size: 0.98rem;
-  text-decoration: none;
-  opacity: 0.8;
-  transition: opacity 0.2s;
+    color: #bbb;
+    text-decoration: underline;
+    transition: color 0.2s;
 }
 .footer-links a:hover {
-  opacity: 1;
-  text-decoration: underline;
+    color: var(--accent);
 }
-.footer-made {
-  text-align: center;
-  font-size: 0.95rem;
-  opacity: 0.7;
+.copyright {
+    margin-top: 24px;
+    font-size: 0.9rem;
+    color: #bbb;
 }
-@media (max-width: 800px) {
-  .container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 12px;
-  }
-  .services-list, .e-jurista-products, .footer-links {
+
+/* Стили для карточек продуктов e-Jurista */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    margin: 40px 0;
+}
+.product-card {
+    background: rgba(255,255,255,0.85);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px 0 #0001;
+    padding: 24px 18px 18px 18px;
+    width: 260px;
+    text-align: center;
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1);
+    cursor: pointer;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-  }
-  .product-item, .service-item {
-    min-width: 160px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s var(--transition), transform 0.8s var(--transition);
+}
+.product-card.visible {
+    opacity: 1;
+    transform: none;
+}
+.product-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px 0 #0002;
+}
+.product-card img {
     width: 100%;
-  }
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    background: #f5f5f5;
+}
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-top: 8px;
+}
+
+/* Стили для карточек услуг (Services) */
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+    margin: 40px 0 0 0;
+}
+.service-card {
+    background: rgba(255,255,255,0.92);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px 0 #0001;
+    padding: 24px 18px 18px 18px;
+    width: 180px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1);
+    cursor: pointer;
+    opacity: 1;
+    transform: none;
+}
+.service-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    background: #f5f5f5;
+}
+.service-card span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+/* Стили для секции About */
+.about {
+    background: linear-gradient(120deg, #1a1a1a 0%, #b94e3a 100%);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 #0003;
+    margin-bottom: 48px;
+    padding: 48px 0;
+}
+.about-lead {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+.about-columns {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.about-main {
+    flex: 2;
+    min-width: 260px;
+}
+.about-list {
+    margin-top: 24px;
+    padding-left: 0;
+    font-size: 1.05rem;
+    color: #fff;
+    list-style: none;
+}
+.about-list li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 28px;
+    font-size: 1.1rem;
+}
+.about-list li:before {
+    content: '✓';
+    color: #3ed6b7;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.about-quote {
+    background: rgba(255,255,255,0.7);
+    border-left: 4px solid #3ed6b7;
+    padding: 18px 22px;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px 0 #0001;
+    margin-top: 24px;
+}
+
+/* Стили для секции Blog */
+.blog {
+    background: transparent;
+    margin-bottom: 48px;
+    text-align: center;
+}
+.blog-lead {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 28px;
+    margin-top: 8px;
+    text-align: center;
+}
+.btn-secondary {
+    background: #fff;
+    color: #b94e3a;
+    border: 2px solid #b94e3a;
+    border-radius: 30px;
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    margin-top: 18px;
+    display: inline-block;
+}
+.btn-secondary:hover {
+    background: #b94e3a;
+    color: #fff;
+}
+
+.e-jurista {
+    background: rgba(255,255,255,0.08);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 #0002;
+    margin-bottom: 48px;
+    padding: 48px 0;
+}
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    margin: 40px 0;
+}
+.product-card {
+    background: rgba(255,255,255,0.95);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px 0 #0001;
+    padding: 24px 18px 18px 18px;
+    width: 260px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1);
+    cursor: pointer;
+    opacity: 1;
+    transform: none;
+}
+.product-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    background: #f5f5f5;
+}
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-top: 8px;
+}
+
+.footer {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 40px 0 20px 0;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 -4px 24px 0 #0002;
+}
+.footer-contact {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.footer-lead {
+    color: #e0e0e0;
+    margin-bottom: 18px;
+}
+.contact-form {
+    margin: 20px auto 0 auto;
+    max-width: 400px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.contact-form input[type="email"] {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+}
+.contact-form button {
+    padding: 10px 24px;
+    border-radius: 20px;
+    border: none;
+    background: #b94e3a;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.contact-form button:hover {
+    background: #3ed6b7;
+    color: #1a1a1a;
+}
+.footer-links {
+    margin: 24px 0 8px 0;
+    font-size: 0.95rem;
+    color: #bbb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
+.footer-links a {
+    color: #bbb;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+.footer-links a:hover {
+    color: #3ed6b7;
+}
+
+.section-title {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 12px #0002;
+}
+.section-lead {
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    margin-bottom: 2.2em;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+@media (max-width: 900px) {
+    .section-title { font-size: 1.7rem; }
+    .about, .e-jurista { padding: 24px 0; }
+    .products, .services-list { gap: 12px; }
+    .product-card, .service-card { width: 100%; min-width: 0; }
+}
+@media (max-width: 800px) {
+    .nav {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: rgba(255,255,255,0.98);
+        box-shadow: 0 4px 24px 0 #0001;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        padding: 24px 0 12px 0;
+        z-index: 150;
+    }
+    .nav.active {
+        display: flex;
+    }
+    .burger {
+        display: flex;
+    }
+    .header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .gear-anim { top: 10px; width: 44px; height: 44px; }
+}
+@media (max-width: 600px) {
+    .about-columns { gap: 10px; flex-direction: column; }
+    .container { padding: 0 4px; }
+    .hero { padding: 48px 0 32px 0; }
+    .hero h1 { font-size: 1.3rem; }
+    .hero p { font-size: 1rem; }
+    .btn-primary, .btn-secondary { padding: 10px 16px; font-size: 0.98rem; }
+    .services-list, .products { gap: 12px; }
+    .service-card, .product-card { padding: 14px 8px 10px 8px; width: 100%; min-width: 0; }
+    .product-card img { height: 110px; }
+    .about-lead, .about-quote { font-size: 1rem; }
+    .about-columns { gap: 10px; }
+    .footer { padding: 24px 0 10px 0; }
+    .footer .contact-form { flex-direction: column; gap: 8px; }
+    .footer input[type="email"], .footer button { width: 100%; font-size: 1rem; }
+    .footer-links { gap: 8px; font-size: 0.85rem; }
+}
+
+.gear-anim, .gear-hero, .gear-about {
+    display: none !important;
+}
+
+.new-header {
+    background: linear-gradient(120deg, #4ade80 0%, #f87171 100%);
+    border-bottom: none;
+    box-shadow: none;
+    padding: 0;
+}
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 0 0 0;
+}
+.logo-block {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.logo-img {
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    object-fit: cover;
+    background: #fff;
+}
+.logo-text {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.header-btn {
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+    border-radius: 24px;
+    padding: 8px 28px;
+    font-size: 1.1rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+.header-btn:hover {
+    background: #fff;
+    color: #1a1a1a;
+}
+
+.new-hero {
+    position: relative;
+    min-height: 540px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: linear-gradient(120deg, #4ade80 0%, #f87171 100%);
+    overflow: hidden;
+    box-shadow: 0 12px 48px 0 #b94e3a55, 0 2px 24px 0 #0005;
+    padding: 0 0 60px 0;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(120deg, #1a1a1a 0%, #b94e3a 100%);
+    opacity: 0.75;
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 64px;
+    text-align: left;
+    max-width: 900px;
+}
+.hero-title {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 0.2em;
+}
+.hero-title-accent {
+    color: #fff;
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 4.2rem;
+    font-weight: 700;
+    display: block;
+    margin-top: 0.1em;
+}
+.hero-sub {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 32px;
+    margin-bottom: 32px;
+    margin-top: 18px;
+}
+.hero-sub-accent {
+    color: #3ed6b7;
+    font-size: 2.2rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+}
+.pro-bono {
+    margin-left: auto;
+    font-style: italic;
+    color: #fff;
+    font-size: 1.1rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+    opacity: 0.85;
+}
+.hero-image-block {
+    margin-top: 32px;
+    border-radius: 24px;
+    overflow: hidden;
+    max-width: 100%;
+    box-shadow: 0 8px 32px 0 #0003;
+}
+.hero-image {
+    width: 100%;
+    max-width: 900px;
+    display: block;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+/* Анимации появления */
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-60px); }
+    to { opacity: 1; transform: none; }
+}
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(60px); }
+    to { opacity: 1; transform: none; }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(60px); }
+    to { opacity: 1; transform: none; }
+}
+.fadeInLeft { opacity: 0; animation: fadeInLeft 1.2s forwards; }
+.fadeInRight { opacity: 0; animation: fadeInRight 1.2s forwards; }
+.fadeInUp { opacity: 0; animation: fadeInUp 1.2s forwards; }
+.visible.fadeInLeft,
+.visible.fadeInRight,
+.visible.fadeInUp { opacity: 1; }
+
+@media (max-width: 900px) {
+    .hero-title { font-size: 2.2rem; }
+    .hero-title-accent { font-size: 2.7rem; }
+    .hero-sub-accent { font-size: 1.2rem; }
+    .hero-content { padding-top: 32px; }
+}
+@media (max-width: 600px) {
+    .logo-text { font-size: 1.3rem; }
+    .logo-img { width: 32px; height: 32px; }
+    .hero-title { font-size: 1.2rem; }
+    .hero-title-accent { font-size: 1.5rem; }
+    .hero-sub-accent { font-size: 1rem; }
+    .hero-image-block { margin-top: 16px; }
 }

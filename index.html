@@ -1,146 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JURISTA</title>
-  <link rel="stylesheet" href="assets/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Шрифты будут подключены позже -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JURISTA — Legal Services for the Digital Age</title>
+    <meta name="description" content="JURISTA — Legal Services for the Digital Age. Legal solutions for tech, business, and innovation. Moldova, Europe.">
+    <meta property="og:title" content="JURISTA — Legal Services for the Digital Age">
+    <meta property="og:description" content="Legal solutions for tech, business, and innovation. Moldova, Europe.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/favicon.ico">
+    <meta property="og:url" content="https://juristaweb.tilda.ws/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="assets/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=DM+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-      <div class="container">
-        <div class="logo-title">
-          <img src="assets/images/logo.svg" alt="JURISTA Logo" class="logo" />
-          <span class="brand">e-Jurista</span>
+    <header class="header new-header">
+        <div class="container header-flex">
+            <div class="logo-block">
+                <img src="assets/images/432sa.jpg" alt="Jurista Logo" class="logo-img">
+                <span class="logo-text">Jurista</span>
+            </div>
+            <nav class="nav" id="nav">
+                <a href="#hero">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#blog">Blog</a>
+                <a href="#e-jurista">e-Jurista</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="header-btn">e-Jurista</a>
+                <div class="burger" id="burger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
         </div>
-        <nav class="main-nav">
-          <!-- Навигация будет добавлена позже -->
-        </nav>
-      </div>
     </header>
-    <section class="hero">
-      <div class="container">
-        <h1 class="hero-title">Reinventing the local<br>Legal Services Industry</h1>
-        <p class="hero-subtitle">And we are just getting started</p>
-        <div class="hero-next">What's Next for Tech?</div>
-      </div>
-    </section>
-    <section class="services">
-      <div class="container">
-        <h2 class="section-title">Services</h2>
-        <div class="services-list">
-          <div class="service-item">Pro Bono</div>
-          <div class="service-item">e-Jurista</div>
-          <div class="service-item">China Desk</div>
-          <div class="service-item">Intellectual Property</div>
-          <div class="service-item">Labor - Workforce Redesign</div>
-          <div class="service-item">Corporate / M&amp;A</div>
-          <div class="service-item">Privacy &amp; Data Protection</div>
-          <div class="service-item">Environmental, Social &amp; Governance</div>
-          <div class="service-item">Immigration Law</div>
-          <div class="service-item">European Law, Trade &amp; Enlargement</div>
-          <div class="service-item">Banking &amp; Finance</div>
-          <div class="service-item">Investigations, Compliance &amp; Ethics</div>
-          <div class="service-item">AI &amp; Robotics - ICT &amp; Digital Assets</div>
-          <div class="service-item">Competition Law / State Aid</div>
-          <div class="service-item">Legislative &amp; Government Affairs</div>
-          <div class="service-item">Private Equity, Investment Funds</div>
-          <div class="service-item">White Collar Crime and Government Investigations</div>
-          <div class="service-item">Grant &amp; Project Advisory</div>
-          <div class="service-item">Intra-business seminars</div>
+    <section class="hero new-hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content fadeInLeft">
+            <h1 class="hero-title">
+                Reinventing the local<br>
+                <span class="hero-title-accent">Legal Services Industry</span>
+            </h1>
+            <div class="hero-sub">
+                <span class="hero-sub-accent">And we are just getting started</span>
+                <span class="pro-bono">Pro Bono</span>
+            </div>
+            <div class="hero-image-block fadeInUp">
+                <img src="assets/images/432sa1.jpg" alt="Office" class="hero-image">
+            </div>
         </div>
-      </div>
     </section>
-    <section class="about">
-      <div class="container">
-        <h2 class="section-title">What sets us apart?</h2>
-        <ul class="about-list">
-          <li>✓ A clear focus on innovation, sustainability, and global alignment</li>
-          <li>✓ Strong connections with regulators and policy-makers</li>
-          <li>✓ A hands-on, business-oriented approach</li>
-          <li>✓ Custom legal strategies, not templates</li>
-        </ul>
-        <p class="about-text">At JURISTA, we go beyond traditional legal advice. We are your strategic legal partner—here to protect your ideas, power your growth, and navigate legal complexity with clarity and confidence.<br><br>Born from a vision to simplify access to high-level legal solutions, JURISTA is a forward-thinking legal consultancy based in Moldova, built by a team of dynamic, multilingual professionals. We work at the intersection of law, technology, and business, helping startups, investors, and global companies stay compliant, competitive, and ready for the future.</p>
-      </div>
-    </section>
-    <section class="blog">
-      <div class="container">
-        <h2 class="section-title">The Law Corner Blog</h2>
-        <ul class="blog-list">
-          <li><a href="#">What international companies ask before entering Moldova – and how we answer?</a></li>
-          <li><a href="#">The end of borders: Why Moldova is ready for global tech, AI and robotics companies?</a></li>
-          <li><a href="#">Elveția între stabilitate economică și vulnerabilități financiare: ce putem învăța?</a></li>
-        </ul>
-        <a href="https://juristaweb.tilda.ws/blog" class="blog-more" target="_blank">Read more</a>
-      </div>
-    </section>
-    <section class="e-jurista">
-      <div class="container">
-        <h2 class="section-title">e-JURISTA</h2>
-        <p class="e-jurista-desc">To make essential legal documents easily accessible, we created a dedicated space — your very own legal e-shop. e-JURISTA offers a fast, simple way to get the legal templates your business needs — from employment contracts and NDAs to other key agreements — all pre-drafted and ready to fill in.</p>
-        <div class="e-jurista-products">
-          <div class="product-item">
-            <img src="assets/images/432sa.jpg" alt="Convertible Note Agreement">
-            <div class="product-title">Convertible Note Agreement</div>
-          </div>
-          <div class="product-item">
-            <img src="assets/images/432sa1.jpg" alt="SPV Agreement">
-            <div class="product-title">SPV Agreement</div>
-          </div>
-          <div class="product-item">
-            <img src="assets/images/432sa11.jpg" alt="Operating Agreement/Articles of Association">
-            <div class="product-title">Operating Agreement/Articles of Association</div>
-          </div>
-          <div class="product-item">
-            <img src="assets/images/432se.jpg" alt="SAFT - Simple Agreement for Future Tokens">
-            <div class="product-title">SAFT - Simple Agreement for Future Tokens</div>
-          </div>
-          <div class="product-item">
-            <img src="assets/images/dara.jpg" alt="SAFE - Simple Agreement for Future Equity">
-            <div class="product-title">SAFE - Simple Agreement for Future Equity</div>
-          </div>
-          <div class="product-item">
-            <img src="assets/images/43sr.jpg" alt="Convertible Note Agreement">
-            <div class="product-title">Convertible Note Agreement</div>
-          </div>
-          <div class="product-item">
-            <img src="assets/images/kiss.jpg" alt="KISS - Keep It Simple Security Agreement">
-            <div class="product-title">KISS - Keep It Simple Security Agreement</div>
-          </div>
+    <section class="services" id="services">
+        <div class="container fadeInUp">
+            <h2 class="section-title">Services</h2>
+            <p class="section-lead">Your Idea, Our Expertise</p>
+            <div class="services-list">
+                <div class="service-card"><img src="assets/images/432sa.jpg" alt="Pro Bono"><span>Pro Bono</span></div>
+                <div class="service-card"><img src="assets/images/432sa1.jpg" alt="e-Jurista"><span>e-Jurista</span></div>
+                <div class="service-card"><img src="assets/images/432sa11.jpg" alt="China Desk"><span>China Desk</span></div>
+                <div class="service-card"><img src="assets/images/432se.jpg" alt="Intellectual Property"><span>Intellectual Property</span></div>
+                <div class="service-card"><img src="assets/images/43sr.jpg" alt="Labor - Workforce Redesign"><span>Labor - Workforce Redesign</span></div>
+                <div class="service-card"><img src="assets/images/dara.jpg" alt="Corporate / M&A"><span>Corporate / M&A</span></div>
+                <div class="service-card"><img src="assets/images/432sa.jpg" alt="Privacy & Data Protection"><span>Privacy & Data Protection</span></div>
+                <div class="service-card"><img src="assets/images/432sa1.jpg" alt="Environmental, Social & Governance"><span>Environmental, Social & Governance</span></div>
+                <div class="service-card"><img src="assets/images/432sa11.jpg" alt="Immigration Law"><span>Immigration Law</span></div>
+                <div class="service-card"><img src="assets/images/432se.jpg" alt="European Law, Trade & Enlargement"><span>European Law, Trade & Enlargement</span></div>
+                <div class="service-card"><img src="assets/images/43sr.jpg" alt="Banking & Finance"><span>Banking & Finance</span></div>
+                <div class="service-card"><img src="assets/images/dara.jpg" alt="Investigations, Compliance & Ethics"><span>Investigations, Compliance & Ethics</span></div>
+                <div class="service-card"><img src="assets/images/432sa.jpg" alt="AI & Robotics - ICT & Digital Assets"><span>AI & Robotics - ICT & Digital Assets</span></div>
+                <div class="service-card"><img src="assets/images/432sa1.jpg" alt="Competition Law / State Aid"><span>Competition Law / State Aid</span></div>
+                <div class="service-card"><img src="assets/images/432sa11.jpg" alt="Legislative & Government Affairs"><span>Legislative & Government Affairs</span></div>
+                <div class="service-card"><img src="assets/images/432se.jpg" alt="Private Equity, Investment Funds"><span>Private Equity, Investment Funds</span></div>
+                <div class="service-card"><img src="assets/images/43sr.jpg" alt="White Collar Crime and Government Investigations"><span>White Collar Crime and Government Investigations</span></div>
+                <div class="service-card"><img src="assets/images/dara.jpg" alt="Grant & Project Advisory"><span>Grant & Project Advisory</span></div>
+                <div class="service-card"><img src="assets/images/432sa.jpg" alt="Intra-business seminars"><span>Intra-business seminars</span></div>
+            </div>
         </div>
-        <a href="https://juristaweb.tilda.ws/e-jurista" class="e-jurista-more" target="_blank">View all products</a>
-      </div>
     </section>
-    <section class="contacts">
-      <div class="container">
-        <h2 class="section-title">Contact us</h2>
-        <p class="contacts-desc">Feel free to contact us for a free consultation.<br>Don’t hesitate to reach out — we’re happy to offer a free consultation!</p>
-        <div class="contacts-info">
-          <div class="contacts-email">info@jurista.md</div>
-          <div class="contacts-phone">+(373) 68 60 60 60</div>
+    <section class="about" id="about">
+        <div class="container fadeInRight">
+            <h2 class="section-title">About Jurista</h2>
+            <p class="about-lead">At JURISTA, we go beyond traditional legal advice. We are your strategic legal partner—here to protect your ideas, power your growth, and navigate legal complexity with clarity and confidence.</p>
+            <div class="about-columns">
+                <div class="about-main">
+                    <p>Born from a vision to simplify access to high-level legal solutions, JURISTA is a forward-thinking legal consultancy based in Moldova, built by a team of dynamic, multilingual professionals. We work at the intersection of law, technology, and business, helping startups, investors, and global companies stay compliant, competitive, and ready for the future.</p>
+                    <ul class="about-list">
+                        <li>A clear focus on innovation, sustainability, and global alignment</li>
+                        <li>Strong connections with regulators and policy-makers</li>
+                        <li>A hands-on, business-oriented approach</li>
+                        <li>Custom legal strategies, not templates</li>
+                    </ul>
+                </div>
+                <div class="about-side">
+                    <div class="about-quote">“We don’t just understand the law — we understand your goals. Behind every ambitious project, there’s a legal strategy that makes it possible.”</div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-links">
-          <a href="#">Data privacy notice for applicants</a>
-          <a href="#">Bank account details</a>
-          <a href="#">Slavery & human trafficking statement</a>
-          <a href="#">Online dispute resolution</a>
-          <a href="#">Statement about the anti-facilitation of tax evasion</a>
-          <a href="#">Legal & regulatory notice</a>
-          <a href="#">Privacy notice</a>
-          <a href="#">Cookies & website privacy notice</a>
-          <a href="#">Client complaints</a>
-          <a href="#">Website terms of use</a>
+    <section class="blog" id="blog">
+        <div class="container">
+            <h2 class="section-title">The Law Corner Blog</h2>
+            <p class="blog-lead">Insights, news, and legal tips for tech-driven businesses. Stay updated with the latest trends and expert opinions from the JURISTA team.</p>
+            <a href="https://juristaweb.tilda.ws/blog" target="_blank" class="btn-secondary blog-link">Read more</a>
         </div>
-        <div class="footer-made">Made on Tilda</div>
-      </div>
+    </section>
+    <section class="e-jurista" id="e-jurista">
+        <div class="container">
+            <h2 class="section-title">e-JURISTA</h2>
+            <p class="section-lead">To make essential legal documents easily accessible, we created a dedicated space — your very own legal e-shop. e-JURISTA offers a fast, simple way to get the legal templates your business needs — from employment contracts and NDAs to other key agreements — all pre-drafted and ready to fill in.</p>
+            <div class="products">
+                <a class="product-card" href="#">
+                    <img src="assets/images/432sa.jpg" alt="Convertible Note Agreement">
+                    <div class="product-title">Convertible Note Agreement</div>
+                </a>
+                <a class="product-card" href="#">
+                    <img src="assets/images/432sa1.jpg" alt="SPV Agreement Operating Agreement/Articles of Association">
+                    <div class="product-title">SPV Agreement Operating Agreement/Articles of Association</div>
+                </a>
+                <a class="product-card" href="#">
+                    <img src="assets/images/432sa11.jpg" alt="SAFT - Simple Agreement for Future Tokens">
+                    <div class="product-title">SAFT - Simple Agreement for Future Tokens</div>
+                </a>
+                <a class="product-card" href="#">
+                    <img src="assets/images/432se.jpg" alt="SAFE - Simple Agreement for Future Equity">
+                    <div class="product-title">SAFE - Simple Agreement for Future Equity</div>
+                </a>
+                <a class="product-card" href="#">
+                    <img src="assets/images/43sr.jpg" alt="Convertible Note Agreement">
+                    <div class="product-title">Convertible Note Agreement</div>
+                </a>
+                <a class="product-card" href="#">
+                    <img src="assets/images/dara.jpg" alt="KISS - Keep It Simple Security Agreement">
+                    <div class="product-title">KISS - Keep It Simple Security Agreement</div>
+                </a>
+            </div>
+            <a href="https://juristaweb.tilda.ws/e-jurista" target="_blank" class="btn-secondary">View all products</a>
+        </div>
+    </section>
+    <footer class="footer" id="contact">
+        <div class="container">
+            <p class="footer-contact">info@jurista.md | +(373) 68 60 60 60</p>
+            <p class="footer-lead">Feel free to write and call us</p>
+            <form class="contact-form">
+                <input type="email" placeholder="Your email" required>
+                <button type="submit">Submit</button>
+            </form>
+            <div class="footer-links">
+                <a href="#">Data privacy notice for applicants</a>
+                <a href="#">Bank account details</a>
+                <a href="#">Slavery & human trafficking statement</a>
+                <a href="#">Online dispute resolution</a>
+                <a href="#">Statement about the anti-facilitation of tax evasion</a>
+                <a href="#">Legal & regulatory notice</a>
+                <a href="#">Privacy notice</a>
+                <a href="#">Cookies & website privacy notice</a>
+                <a href="#">Client complaints</a>
+                <a href="#">Website terms of use</a>
+            </div>
+        </div>
     </footer>
-    <script src="assets/main.js"></script>
-  </body>
+    <script src="main.js"></script>
+</body>
 </html>
