@@ -17,33 +17,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=DM+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+    <nav class="nav" id="nav">
+        <a href="#services">Services</a>
+        <a href="#about">About us</a>
+        <a href="#blog">Blog</a>
+        <a href="#e-jurista">e-Jurista</a>
+        <a href="#contact">Contacts</a>
+    </nav>
+    <button class="burger" id="burger">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+    </button>
     <header class="header new-header">
-        <div class="container header-flex">
+        <div class="container header-flex" data-aos="fade-down">
             <div class="logo-block">
-                <img src="assets/images/432sa.jpg" alt="Jurista Logo" class="logo-img">
-                <span class="logo-text">Jurista</span>
+                <img src="assets/images/logo.png" alt="Jurista Logo" class="logo-img">
             </div>
-            <nav class="nav" id="nav">
-                <a href="#hero">Home</a>
-                <a href="#services">Services</a>
-                <a href="#about">About</a>
-                <a href="#blog">Blog</a>
-                <a href="#e-jurista">e-Jurista</a>
-                <a href="#contact">Contact</a>
-            </nav>
+            
             <div class="header-actions">
-                <a href="#" class="header-btn">e-Jurista</a>
-                <div class="burger" id="burger">
-                    <span></span><span></span><span></span>
-                </div>
             </div>
         </div>
     </header>
     <section class="hero new-hero" id="hero">
         <div class="hero-overlay"></div>
-        <div class="container hero-content fadeInLeft">
+        <div class="container hero-content">
             <h1 class="hero-title">
                 <span class="typing-effect">Reinventing the local</span><br>
                 <span class="typing-effect-second">Legal Services Industry</span>
@@ -52,91 +53,124 @@
             <div class="hero-sub">
                 <span class="pro-bono">Pro Bono</span>
             </div>
-            <div class="hero-image-block fadeInUp">
-                <img src="assets/images/432sa1.jpg" alt="Office" class="hero-image">
+            <div class="hero-image-block" data-aos="fade-up" data-aos-delay="400">
+                <img src="assets/images/bg-main.png" alt="Office" class="hero-image">
             </div>
         </div>
     </section>
+
+    <section class="tech-regs-section" data-aos="fade-in">
+        <div class="container tech-regs-container">
+            <div class="tech-regs-content" data-aos="fade-right">
+                <p class="subheading">What's Next for Tech?</p>
+                <h2>Stricter regulations. Smarter decisions. As legal frameworks around technology evolve, businesses must stay ahead. Our team delivers clear, practical legal solutions.</h2>
+            </div>
+        </div>
+        <div class="tech-regs-graphic" data-aos="fade-left">
+            <div class="radial-graphic-small"></div>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <section class="idea-section" id="idea-section" data-aos="zoom-in">
+        <div class="idea-container">
+            <div class="idea-panel idea-left-panel" data-aos="fade-right">
+                <h3>Behind every ambitious project, there's a legal strategy that makes it possible.</h3>
+                <p>Legal services for the digital age — at JURISTA, we combine deep legal expertise with a tech-first mindset to help modern businesses stay ahead.</p>
+            </div>
+            <div class="idea-center">
+                <div class="radial-graphic" data-aos="zoom-in-up" data-aos-delay="200"></div>
+                <h2 class="idea-title">Your Idea,<br>Our Expertise</h2>
+            </div>
+            <div class="idea-panel idea-right-panel" data-aos="fade-left">
+                <h3>We don't just understand the law — we understand your goals.</h3>
+                <p>JURISTA stands by your side as a trusted advisor, helping you navigate uncertainty, seize opportunity, and build with confidence.</p>
+            </div>
+        </div>
+        
+    </section>
+
     <section class="services" id="services">
-        <div class="container fadeInUp">
+        <div class="container" data-aos="fade-up">
             <h2 class="section-title">Services</h2>
             <p class="section-lead">Your Idea, Our Expertise</p>
             <div class="services-list">
-                <div class="service-card"><i class="fa-solid fa-hand-holding-heart service-icon"></i><span>Pro Bono</span></div>
-                <div class="service-card"><i class="fa-solid fa-gavel service-icon"></i><span>e-Jurista</span></div>
-                <div class="service-card"><i class="fa-solid fa-globe-asia service-icon"></i><span>China Desk</span></div>
-                <div class="service-card"><i class="fa-solid fa-lightbulb service-icon"></i><span>Intellectual Property</span></div>
-                <div class="service-card"><i class="fa-solid fa-users-cog service-icon"></i><span>Labor - Workforce Redesign</span></div>
-                <div class="service-card"><i class="fa-solid fa-building service-icon"></i><span>Corporate / M&A</span></div>
-                <div class="service-card"><i class="fa-solid fa-user-shield service-icon"></i><span>Privacy & Data Protection</span></div>
-                <div class="service-card"><i class="fa-solid fa-leaf service-icon"></i><span>Environmental, Social & Governance</span></div>
-                <div class="service-card"><i class="fa-solid fa-passport service-icon"></i><span>Immigration Law</span></div>
-                <div class="service-card"><i class="fa-solid fa-balance-scale service-icon"></i><span>European Law, Trade & Enlargement</span></div>
-                <div class="service-card"><i class="fa-solid fa-university service-icon"></i><span>Banking & Finance</span></div>
-                <div class="service-card"><i class="fa-solid fa-user-secret service-icon"></i><span>Investigations, Compliance & Ethics</span></div>
-                <div class="service-card"><i class="fa-solid fa-robot service-icon"></i><span>AI & Robotics - ICT & Digital Assets</span></div>
-                <div class="service-card"><i class="fa-solid fa-trophy service-icon"></i><span>Competition Law / State Aid</span></div>
-                <div class="service-card"><i class="fa-solid fa-landmark service-icon"></i><span>Legislative & Government Affairs</span></div>
-                <div class="service-card"><i class="fa-solid fa-hand-holding-usd service-icon"></i><span>Private Equity, Investment Funds</span></div>
-                <div class="service-card"><i class="fa-solid fa-user-tie service-icon"></i><span>White Collar Crime and Government Investigations</span></div>
-                <div class="service-card"><i class="fa-solid fa-hands-helping service-icon"></i><span>Grant & Project Advisory</span></div>
-                <div class="service-card"><i class="fa-solid fa-chalkboard-teacher service-icon"></i><span>Intra-business seminars</span></div>
+                <div class="service-card" data-aos="fade-up"><i class="fa-solid fa-hand-holding-heart service-icon"></i><span>Pro Bono</span></div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="50"><i class="fa-solid fa-gavel service-icon"></i><span>e-Jurista</span></div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-globe-asia service-icon"></i><span>China Desk</span></div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="150"><i class="fa-solid fa-lightbulb service-icon"></i><span>Intellectual Property</span></div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200"><i class="fa-solid fa-users-cog service-icon"></i><span>Labor - Workforce Redesign</span></div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="250"><i class="fa-solid fa-building service-icon"></i><span>Corporate / M&A</span></div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300"><i class="fa-solid fa-user-shield service-icon"></i><span>Privacy & Data Protection</span></div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="350"><i class="fa-solid fa-leaf service-icon"></i><span>Environmental, Social & Governance</span></div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400"><i class="fa-solid fa-passport service-icon"></i><span>Immigration Law</span></div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="450"><i class="fa-solid fa-balance-scale service-icon"></i><span>European Law, Trade & Enlargement</span></div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500"><i class="fa-solid fa-university service-icon"></i><span>Banking & Finance</span></div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="550"><i class="fa-solid fa-user-secret service-icon"></i><span>Investigations, Compliance & Ethics</span></div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600"><i class="fa-solid fa-robot service-icon"></i><span>AI & Robotics - ICT & Digital Assets</span></div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="650"><i class="fa-solid fa-trophy service-icon"></i><span>Competition Law / State Aid</span></div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="700"><i class="fa-solid fa-landmark service-icon"></i><span>Legislative & Government Affairs</span></div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="750"><i class="fa-solid fa-hand-holding-usd service-icon"></i><span>Private Equity, Investment Funds</span></div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="800"><i class="fa-solid fa-user-tie service-icon"></i><span>White Collar Crime and Government Investigations</span></div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="850"><i class="fa-solid fa-hands-helping service-icon"></i><span>Grant & Project Advisory</span></div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="900"><i class="fa-solid fa-chalkboard-teacher service-icon"></i><span>Intra-business seminars</span></div>
             </div>
         </div>
     </section>
     <section class="about" id="about">
-        <div class="container fadeInRight">
-            <h2 class="section-title">About Jurista</h2>
-            <p class="about-lead">At JURISTA, we go beyond traditional legal advice. We are your strategic legal partner—here to protect your ideas, power your growth, and navigate legal complexity with clarity and confidence.</p>
-            <div class="about-columns">
-                <div class="about-main">
-                    <p>Born from a vision to simplify access to high-level legal solutions, JURISTA is a forward-thinking legal consultancy based in Moldova, built by a team of dynamic, multilingual professionals. We work at the intersection of law, technology, and business, helping startups, investors, and global companies stay compliant, competitive, and ready for the future.</p>
-                    <ul class="about-list">
-                        <li>A clear focus on innovation, sustainability, and global alignment</li>
-                        <li>Strong connections with regulators and policy-makers</li>
-                        <li>A hands-on, business-oriented approach</li>
-                        <li>Custom legal strategies, not templates</li>
-                    </ul>
+        <div class="container about-container" data-aos="fade-up">
+            <div class="about-visual">
+                
+                    <img src="assets/images/badge.png" alt="Jurista Logo" class="about-tag-logo">
                 </div>
-                <div class="about-side">
-                    <div class="about-quote">“We don’t just understand the law — we understand your goals. Behind every ambitious project, there’s a legal strategy that makes it possible.”</div>
-                </div>
+            <div class="about-content">
+                <p class="about-subheading">About Jurista</p>
+                <h2 class="about-title">At JURISTA, we go beyond<br>traditional legal advice.</h2>
+                <p>At JURISTA, we go beyond traditional legal advice. We are your strategic legal partner—here to protect your ideas, power your growth, and navigate legal complexity with clarity and confidence.</p>
+                <p>Born from a vision to simplify access to high-level legal solutions, JURISTA is a forward-thinking legal consultancy based in Moldova, built by a team of dynamic, multilingual professionals. We work at the intersection of law, technology, and business, helping startups, investors, and global companies stay compliant, competitive, and ready for the future.</p>
+                <h3>What sets us apart?</h3>
+                <ul class="about-list-new">
+                    <li><i class="fa-solid fa-check"></i>A hands-on, business-oriented approach</li>
+                    <li><i class="fa-solid fa-check"></i>Custom legal strategies, not templates</li>
+                    <li><i class="fa-solid fa-check"></i>Strong connections with regulators and policy-makers</li>
+                    <li><i class="fa-solid fa-check"></i>A clear focus on innovation, sustainability, and global alignment</li>
+                </ul>
             </div>
         </div>
     </section>
-    <section class="blog" id="blog">
+    <section class="blog" id="blog" data-aos="fade-up">
         <div class="container">
             <h2 class="section-title">The Law Corner Blog</h2>
             <p class="blog-lead">Insights, news, and legal tips for tech-driven businesses. Stay updated with the latest trends and expert opinions from the JURISTA team.</p>
             <a href="https://juristaweb.tilda.ws/blog" target="_blank" class="btn-secondary blog-link">Read more</a>
         </div>
     </section>
-    <section class="e-jurista" id="e-jurista">
+    <section class="e-jurista" id="e-jurista" data-aos="fade-up">
         <div class="container">
             <h2 class="section-title">e-JURISTA</h2>
             <p class="section-lead">To make essential legal documents easily accessible, we created a dedicated space — your very own legal e-shop. e-JURISTA offers a fast, simple way to get the legal templates your business needs — from employment contracts and NDAs to other key agreements — all pre-drafted and ready to fill in.</p>
             <div class="products">
-                <a class="product-card" href="#">
+                <a class="product-card" href="#" data-aos="fade-up" data-aos-delay="50">
                     <img src="assets/images/432sa.jpg" alt="Convertible Note Agreement">
                     <div class="product-title">Convertible Note Agreement</div>
                 </a>
-                <a class="product-card" href="#">
+                <a class="product-card" href="#" data-aos="fade-up" data-aos-delay="100">
                     <img src="assets/images/432sa1.jpg" alt="SPV Agreement Operating Agreement/Articles of Association">
                     <div class="product-title">SPV Agreement Operating Agreement/Articles of Association</div>
                 </a>
-                <a class="product-card" href="#">
+                <a class="product-card" href="#" data-aos="fade-up" data-aos-delay="150">
                     <img src="assets/images/432sa11.jpg" alt="SAFT - Simple Agreement for Future Tokens">
                     <div class="product-title">SAFT - Simple Agreement for Future Tokens</div>
                 </a>
-                <a class="product-card" href="#">
+                <a class="product-card" href="#" data-aos="fade-up" data-aos-delay="200">
                     <img src="assets/images/432se.jpg" alt="SAFE - Simple Agreement for Future Equity">
                     <div class="product-title">SAFE - Simple Agreement for Future Equity</div>
                 </a>
-                <a class="product-card" href="#">
+                <a class="product-card" href="#" data-aos="fade-up" data-aos-delay="250">
                     <img src="assets/images/43sr.jpg" alt="Convertible Note Agreement">
                     <div class="product-title">Convertible Note Agreement</div>
                 </a>
-                <a class="product-card" href="#">
+                <a class="product-card" href="#" data-aos="fade-up" data-aos-delay="300">
                     <img src="assets/images/dara.jpg" alt="KISS - Keep It Simple Security Agreement">
                     <div class="product-title">KISS - Keep It Simple Security Agreement</div>
                 </a>
@@ -144,28 +178,59 @@
             <a href="https://juristaweb.tilda.ws/e-jurista" target="_blank" class="btn-secondary">View all products</a>
         </div>
     </section>
-    <footer class="footer" id="contact">
-        <div class="container">
-            <p class="footer-contact">info@jurista.md | +(373) 68 60 60 60</p>
-            <p class="footer-lead">Feel free to write and call us</p>
-            <form class="contact-form">
-                <input type="email" placeholder="Your email" required>
-                <button type="submit">Submit</button>
-            </form>
-            <div class="footer-links">
-                <a href="#">Data privacy notice for applicants</a>
-                <a href="#">Bank account details</a>
-                <a href="#">Slavery & human trafficking statement</a>
-                <a href="#">Online dispute resolution</a>
-                <a href="#">Statement about the anti-facilitation of tax evasion</a>
-                <a href="#">Legal & regulatory notice</a>
+
+    <footer class="footer" id="contact" data-aos="fade-up">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-contact-info">
+                    <p>+(373) 68 60 60 60</p>
+                    <p>info@jurista.md</p>
+                </div>
+                <div class="footer-circles">
+                    <div class="moving-circle circle-1"></div>
+                    <div class="moving-circle circle-2"></div>
+                </div>
+            </div>
+            <div class="footer-right">
+                <h2 class="footer-title">Feel free to write and call us</h2>
+                <form class="footer-form">
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone">
+                        <label for="phone">Phone number</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name">
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="comment" name="comment" rows="3"></textarea>
+                        <label for="comment">Comment</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links-column">
+                <a href="#">Website terms of use</a>
                 <a href="#">Privacy notice</a>
                 <a href="#">Cookies & website privacy notice</a>
                 <a href="#">Client complaints</a>
-                <a href="#">Website terms of use</a>
+            </div>
+            <div class="footer-links-column">
+                <a href="#">Statement about the anti-facilitation of tax evasion</a>
+                <a href="#">Slavery & human trafficking statement</a>
+                <a href="#">Online dispute resolution</a>
+                <a href="#">Bank account details</a>
             </div>
         </div>
     </footer>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
